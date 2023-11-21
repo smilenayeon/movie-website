@@ -1,0 +1,110 @@
+.navbar{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: rgb(74, 70, 70);
+    padding: 0 15px;
+}
+
+.logo{
+    height:100px;
+    width:100px;
+    cursor: pointer;
+}
+
+.navbar-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
+    gap:2rem;
+    position:absolute;
+    top:5rem;
+    right:0;
+    padding: 0 10px 15px 0;
+    background-color:rgb(74, 70, 70);
+    width:100%;
+}
+
+.navbar-links >li>a {
+    color:rgb(220, 94, 16);
+    font-weight: 700;
+}
+.navbar-links >li>a:hover {
+    background-color:rgb(211, 184, 167);
+    text-shadow:0 2px 5px white;
+}
+.navbar-links.hidden{
+    display: none;
+}
+.search-button:hover{
+    background-color: rgb(220, 94, 16);
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+/*********************************************************************hamburger-menu*/
+.hamburger-menu{
+    width:40px;
+    height:40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+   
+}
+.hamburger-menu-icon{
+    position:relative;
+  
+
+
+}
+.hamburger-menu-icon,.hamburger-menu-icon::before, .hamburger-menu-icon::after {
+    width:30px;
+    height:5px;
+    background-color: rgb(220, 94, 16);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburger-menu-icon::before, .hamburger-menu-icon::after{
+    content: '';
+    position:absolute;
+    left: 0;
+}
+
+.hamburger-menu-icon::before{
+    top:10px;
+}
+.hamburger-menu-icon::after{
+    bottom:10px;
+}
+
+.hamburger-menu-icon.open{
+   background-color: transparent;
+}
+.hamburger-menu-icon.open::before{
+    transform: translateY(-10px) rotate(45deg);
+}
+
+.hamburger-menu-icon.open::after{
+    transform: translateY(10px) rotate(-45deg);
+}
+
+/**************************************************************************************/
+
+@media (min-width:800px) {
+    .hamburger-menu{
+        display: none;
+    }
+    .navbar-links, .navbar-links.hidden{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:center;
+        gap:2rem;
+        position:static;
+        background-color:rgb(74, 70, 70);
+    }
+}
