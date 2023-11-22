@@ -1,5 +1,4 @@
 import './App.css';
-import { BrowserRouter,Routes, Route} from 'react-router-dom';
 import Hero from "./components/layouts/hero/Hero.jsx";
 import Navbar from "./components/layouts/navbar/Navbar.jsx";
 import NowPlaying from "./components/sections/now-playing/NowPlaying.jsx";

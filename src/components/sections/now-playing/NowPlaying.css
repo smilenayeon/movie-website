@@ -1,0 +1,67 @@
+/* NowPlaying.css */
+
+.now-playing {
+    width: 100%;
+    background-color: black;
+}
+
+.now-playing-section-title{
+  margin:0;
+  color:white;
+}
+  .small-carousel {
+    position: relative;
+    overflow: hidden;
+    width:100%;
+  }
+
+  .small-carousel-container {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .small-carousel-track {
+    display: flex;
+    width: 100%;
+
+  }
+
+  .small-carousel-item {
+    flex: 0 0 15%; 
+    margin-right:20px;
+    box-sizing: border-box;
+  }
+
+  .small-carousel-item > img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #3333332c;
+    color: #fff;
+    padding: 5px 5px;
+    border: none;
+    border-radius:30%;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .prev-button {
+    left: 3px;
+  }
+
+  .next-button {
+    right: 3px;
+  }
+
+  .prev-button:hover,
+  .next-button:hover {
+    background-color: #555;
+  }
