@@ -1,0 +1,93 @@
+/* Carousel container */
+.carousel {
+    padding-top:10px;
+    position: relative;
+   width:100%; /* Set your desired maximum width */
+    margin: 0 auto;
+    overflow:hidden;
+  }
+  
+  /* Carousel items */
+  .carousel-item {
+    display:none;
+    text-align: center;
+  }
+  
+  /* Show the active slide */
+  .carousel-item.active {
+    display: block;
+     }
+  
+  /* Image styling */
+  .carousel-item> img {
+    height: 80vh;
+    width:100%;
+    border:none;
+    border-radius: 5px;
+    object-fit: contain;
+ }
+ .carousel-item> h3 {
+    position: absolute;
+    z-index: 1;
+   bottom: 0;
+    right:10px;
+    color:black;
+    padding: 0 5px;
+    border-radius: 5px;
+    background-color: #bbbbbb54;
+ }
+
+  /* Navigation buttons */
+  .carousel button {
+    background-color: #33333304;
+    color: #fff;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .carousel button:first-child {
+    left: 5px;
+  }
+  
+  .carousel button:last-child {
+    right: 5px;
+  }
+  
+
+  /* Add hover effect for navigation buttons */
+  .carousel button:hover {
+    background-color: #e9e2e244;
+  }
+  
+  /* Carousel item caption */
+  .carousel-item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  /* Indicator dots (optional) */
+  .carousel-indicators {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .carousel-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .carousel-indicator.active {
+    background-color: #333;
+  }
+

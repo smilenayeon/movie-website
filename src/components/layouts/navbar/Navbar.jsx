@@ -1,34 +1,37 @@
 import React,{useState} from 'react';
-import {Link, useNavigate} from "react-router-dom";
-import Logo from "../../assets/images/movie-search-logo.png";
+import Logo from "../../../assets/images/movie-search-logo.png";
 import "./Navbar.css";
 
 function Navbar() {
-    const navigate = useNavigate();
+   
     const [isOpen,setIsOpen]=useState(false);
 
     const hamburgerClick=()=>{
         setIsOpen(!isOpen)
     };
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+        setIsOpen(false); // Close the mobile menu after clicking a link
+      };
 
-    const logoClick = ()=>{
-      navigate("/");
-      setIsOpen(false);
-
-    }
 
   return (
     <div className="navbar">
    
-    <img className="logo" onClick={logoClick} src={Logo} alt="logo"/>
+    <a href="#hero"><img className="logo" onClick={()=>setIsOpen(false)} src={Logo} alt="logo"/></a>
 
     
 
         <ul className={`navbar-links ${isOpen? "":"hidden"}`}>
-            <li onClick={()=>setIsOpen(!isOpen)}><Link to="/now-playing">Now Playing</Link></li>
-            <li onClick={()=>setIsOpen(!isOpen)}><Link to="/popular">Popular</Link></li>
-            <li onClick={()=>setIsOpen(!isOpen)}><Link to="/top-rated">Top Rated</Link></li>
-            <li onClick={()=>setIsOpen(!isOpen)}><Link to="/up-coming">Up Coming</Link></li>
+            <li onClick={() => scrollToSection("now-playing")}>Now Playing </li>
+            <li onClick={()=> scrollToSection("popular")}>Popular</li>
+            <li onClick={()=> scrollToSection("top-rated")}>Top Rated</li>
+            <li onClick={()=> scrollToSection("up-coming")}>Up Coming</li>
             <form>
                 <label htmlFor="movie-search" name="movie-search"></label>
                 <input type="text" placeholder="search movie title" />

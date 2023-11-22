@@ -2,7 +2,7 @@ import React from 'react'
 
 function UpComing() {
   return (
-    <div>UpComing</div>
+    <div id="up-coming">UpComing</div>
   )
 }
 

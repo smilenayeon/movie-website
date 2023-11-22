@@ -2,7 +2,7 @@ import React from 'react'
 
 function TopRated() {
   return (
-    <div>TopRated</div>
+    <div id="top-rated">TopRated</div>
   )
 }
 

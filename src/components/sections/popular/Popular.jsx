@@ -2,7 +2,7 @@ import React from 'react'
 
 function Popular() {
   return (
-    <div>Popular</div>
+    <div  id="popular" class="popular">Popular</div>
   )
 }
 

@@ -25,15 +25,15 @@
     padding: 0 10px 15px 0;
     background-color:rgb(74, 70, 70);
     width:100%;
+    z-index: 999;
 }
 
-.navbar-links >li>a {
+.navbar-links >li {
     color:rgb(220, 94, 16);
     font-weight: 700;
 }
 .navbar-links >li>a:hover {
-    background-color:rgb(211, 184, 167);
-    text-shadow:0 2px 5px white;
+    text-decoration: 10px underline rgb(165, 81, 81);
 }
 .navbar-links.hidden{
     display: none;
