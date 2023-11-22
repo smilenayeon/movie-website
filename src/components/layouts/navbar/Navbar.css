@@ -31,8 +31,9 @@
 .navbar-links >li {
     color:rgb(220, 94, 16);
     font-weight: 700;
+    cursor: pointer;
 }
-.navbar-links >li>a:hover {
+.navbar-links >li:hover {
     text-decoration: 10px underline rgb(165, 81, 81);
 }
 .navbar-links.hidden{

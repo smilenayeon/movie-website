@@ -21,6 +21,11 @@ const Carousel = ({ items }) => {
     };
   }, [currentIndex,items]);
 
+  const handlePosterClick = (movieId) => {
+    const url = `https://www.themoviedb.org/movie/${movieId}`;
+    window.open(url, '_blank'); // Open in new tab
+  };
+
   return (
 
     <div className="carousel">
@@ -28,6 +33,7 @@ const Carousel = ({ items }) => {
       {items.map((item, index) => (
         <div
           key={index}
+          onClick={() => handlePosterClick(item.id)}
           className={`carousel-item ${
             index === currentIndex ? 'active' : ''
           }`}

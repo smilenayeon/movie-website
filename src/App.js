@@ -5,19 +5,18 @@ import NowPlaying from "./components/sections/now-playing/NowPlaying.jsx";
 import Popular from "./components/sections/popular/Popular.jsx";
 import TopRated from "./components/sections/top-rated/TopRated.jsx";
 import UpComing from './components/sections/up-coming/UpComing.jsx';
+import MovieDetails from './components/utilities/MovieDetails.jsx';
 
 function App() {
   return (
     <div className="App">
-     
       <Navbar/>
       <Hero/>
 <NowPlaying/>
 <Popular/>
 <TopRated/>
 <UpComing/>
-
-
+<MovieDetails />
     </div>
   );
 }
