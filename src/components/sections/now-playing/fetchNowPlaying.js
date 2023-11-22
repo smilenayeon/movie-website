@@ -4,7 +4,7 @@ const API_BASE_URL = "https://api.themoviedb.org/3";
 export async function fetchNowPlayingMovies() {
   try {
     const response = await fetch(
-      `${API_BASE_URL}/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
+      `${API_BASE_URL}/movie/now_playing?api_key=${API_KEY}&with_release_type=2&region=US&language=en-US&page=1`
     );
 
     if (!response.ok) {
