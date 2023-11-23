@@ -33,7 +33,7 @@ function SmallCarousel({items}) {
         {displayItems.map((item, index) => (
             item && ( // Check if item is defined
               <div className="small-carousel-item" key={index}>
-              <a href={`/movie-details?movieId=${item.id}`} target="_blank" rel="noreferrer">
+              <a href={`https://dianago-movie-search.netlify.app/movie-details?movieId=${item.id}`} target="_blank" rel="noreferrer">
 <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt={item.title || 'Movie Image'} />
 </a>
             {item.title && <p>{item.title}</p>} {/* Actor's Name */}
