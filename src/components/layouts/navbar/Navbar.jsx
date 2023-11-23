@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import Logo from "../../../assets/images/movie-search-logo.png";
 import "./Navbar.css";
+import SearchMovie from './SearchMovie';
 
 function Navbar() {
    
@@ -32,15 +33,9 @@ function Navbar() {
             <li onClick={()=> scrollToSection("popular")}>Popular</li>
             <li onClick={()=> scrollToSection("top-rated")}>Top Rated</li>
             <li onClick={()=> scrollToSection("up-coming")}>Up Coming</li>
-            <form>
-                <label htmlFor="movie-search" name="movie-search"></label>
-                <input type="text" placeholder="search movie title" />
-                <input  className="search-button" type="submit" value="Search"/>
-            </form>
+            <SearchMovie/>
         </ul>
         
-        
-
         <button onClick={hamburgerClick} className="hamburger-menu"><div className={`hamburger-menu-icon ${isOpen?"open":""}`}></div></button>
     
     </div>

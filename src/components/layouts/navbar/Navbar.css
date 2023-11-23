@@ -39,12 +39,7 @@
 .navbar-links.hidden{
     display: none;
 }
-.search-button:hover{
-    background-color: rgb(220, 94, 16);
-    transform: scale(1.1);
-    cursor: pointer;
 
-}
 /*********************************************************************hamburger-menu*/
 .hamburger-menu{
     width:40px;
