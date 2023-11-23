@@ -1,17 +1,36 @@
 
-.movie-details{
+#movie-details{
 margin-top:10px;
+background-color: black;
+color:white; 
+padding:1.5rem;
 }
+
 .movie-detail-info-container{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
 }
 .movie-detail-poster{
-    height:200px;
+    width:30%;
 }
 
 .production-info{
     float:right;
 }
+.cast-container{
+    margin:1rem;
+}
+
+.cast-container .small-carousel-item {
+    pointer-events: none;
+}
+
 .cast-profile{
     height:100px;
+}
+
+@media (max-width:584px) {
+    .trailer-video{ width:100%;} 
 }

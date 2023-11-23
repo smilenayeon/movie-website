@@ -103,9 +103,10 @@ function MovieDetails({movieId}) {
               if (video.site === "YouTube" & video.type === "Trailer") {
                 return (
                   <iframe
+                  className="trailer-video"
                     key={video.key}
-                    width="560"
-                    height="315"
+                    width="560px"
+                    height="315px"
                     src={`https://www.youtube.com/embed/${video.key}`}
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
