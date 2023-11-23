@@ -16,12 +16,12 @@
   /* Show the active slide */
   .carousel-item.active {
     display: block;
+    
      }
   
   /* Image styling */
-  .carousel-item> img {
-    height: 80vh;
-    width:100%;
+  .carousel-item>a>img {
+   object-fit: contain;
     border:none;
     border-radius: 5px;
     object-fit: contain;
@@ -89,5 +89,12 @@
   
   .carousel-indicator.active {
     background-color: #333;
+  }
+
+  @media(max-width:520px){
+
+    .carousel-item >a>img{
+      width:300px;
+    }
   }
 

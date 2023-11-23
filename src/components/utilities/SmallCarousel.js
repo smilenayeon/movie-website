@@ -34,9 +34,9 @@ function SmallCarousel({items}) {
             item && ( // Check if item is defined
               <div className="small-carousel-item" key={index}>
               <a href={`/movie-details?movieId=${item.id}`} target="_blank" rel="noreferrer">
-<img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt={item.title || 'Movie Image'} />
+<img className="small-carousel-picture" src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt={item.title || 'Movie Image'} />
 </a>
-            {item.title && <p>{item.title}</p>} {/* Actor's Name */}
+            {item.character&& <p>{item.title}</p>} {/* Actor's Name */}
             {item.character && <p className="character-name">{item.character}</p>} {/* Character Name */}
               </div>
             )
