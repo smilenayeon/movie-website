@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import "./SmallCarousel.css";
-import MovieDetails from './MovieDetails';
+
 
 function SmallCarousel({items}) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,10 +20,10 @@ function SmallCarousel({items}) {
     let index = (currentIndex + i) % items.length;
     displayItems.push(items[index]);
   }
-  const handlePosterClick = (movieId) => {
+ /* const handlePosterClick = (movieId) => {
     const url = `https://www.themoviedb.org/movie/${movieId}`;
     window.open(url, '_blank'); // Open in new tab
-  };
+  };*/
 
   return (
     <div className="small-carousel">
@@ -32,8 +32,12 @@ function SmallCarousel({items}) {
         <div className="small-carousel-track">
         {displayItems.map((item, index) => (
             item && ( // Check if item is defined
-              <div className="small-carousel-item" key={index} onClick={() => handlePosterClick(item.id)} >
+              <div className="small-carousel-item" key={index}>
+              <a href={`/movie-details?movieId=${item.id}`} target="_blank" rel="noreferrer">
 <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt={item.title || 'Movie Image'} />
+</a>
+            {item.title && <p>{item.title}</p>} {/* Actor's Name */}
+            {item.character && <p className="character-name">{item.character}</p>} {/* Character Name */}
               </div>
             )
           ))}

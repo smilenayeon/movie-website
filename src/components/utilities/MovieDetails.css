@@ -1,0 +1,17 @@
+
+.movie-details{
+margin-top:10px;
+}
+.movie-detail-info-container{
+    display: flex;
+}
+.movie-detail-poster{
+    height:200px;
+}
+
+.production-info{
+    float:right;
+}
+.cast-profile{
+    height:100px;
+}

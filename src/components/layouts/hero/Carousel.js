@@ -21,10 +21,6 @@ const Carousel = ({ items }) => {
     };
   }, [currentIndex,items]);
 
-  const handlePosterClick = (movieId) => {
-    const url = `https://www.themoviedb.org/movie/${movieId}`;
-    window.open(url, '_blank'); // Open in new tab
-  };
 
   return (
 
@@ -33,15 +29,16 @@ const Carousel = ({ items }) => {
       {items.map((item, index) => (
         <div
           key={index}
-          onClick={() => handlePosterClick(item.id)}
           className={`carousel-item ${
             index === currentIndex ? 'active' : ''
           }`}
         >
+        <a href={`/movie-details?movieId=${item.id}`} target="_blank" rel="noreferrer">
           <img
             src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
             alt={item.title}
           />
+          </a>
           <h3>Top {index + 1}</h3>
         </div>
       ))}
